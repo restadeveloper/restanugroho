@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react"
 
 const Navbar = ({ Textgradient }: {Textgradient: string}) => {
@@ -11,12 +12,12 @@ const Navbar = ({ Textgradient }: {Textgradient: string}) => {
         <>
             <div id="pembukusutama" className="w-full shadow-xl text-gray-700">
                 <div className="flex items-center justify-between py-4 px-8 bg-white/50 backdrop-blur-xl">
-                    <a href="/" className="flex items-center space-x-3">
+                    <Link href="/" className="flex items-center space-x-3">
                     <img src="https://i.ibb.co.com/GW6QGLX/restaicon.png" className="w-10" />
                     <h1 className="text-xl font-bold">Resta <span className="font-semibold bg-gradient-to-r from-warna1 to-warna2 bg-clip-text text-transparent">Nugroho</span></h1>
-                    </a>
+                    </Link>
                     <div id="sub" className="flex list-none space-x-10">
-                        <li><a href="/" onClick={() => gantiSub("home")} className={`${SubOn === "home" && Textgradient}`}>Home</a></li>
+                        <li><Link href="/" onClick={() => gantiSub("home")} className={`${SubOn === "home" && Textgradient}`}>Home</Link></li>
                         <li><a href="/About" onClick={() => gantiSub("About")} className={`${SubOn === "About" && Textgradient}`}>About</a></li>
                         <li><a href="#" onClick={() => gantiSub("Project")} className={`${SubOn === "Project" && Textgradient}`}>Project</a></li>
                         <li><a href="#" onClick={() => gantiSub("Certificate")} className={`${SubOn === "Certificate" && Textgradient}`}>Certificate</a></li>
